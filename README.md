@@ -1,5 +1,6 @@
 # e20-project
 Jonathan Farah, jkf4068@nyu.edu 
+
 an imaginary processor developed by former NYU Professor Jeffery Epstein that acts as simplified version of x86. The E20 processor has eight numbered 16-bit registers. By convention, in E20 assembly language, we write
 each register name with a dollar sign, so the registers are $0 through $7. However, register $0 is special,
 because its value is always zero and cannot be changed. Attempting to change the value of register $0 is
@@ -10,5 +11,12 @@ through the usual instructions. The program counter stores the memory address of
 instruction. The initial value of the program counter register is zero. After each non-jump instruction, the
 program counter is incremented. A jump instruction may adjust the program count
 
-This project is designed to simulate the e20 processor. It uses labels to simplify algorithm, like a function call. Uses transfer values between registers and memory. It is important to break each 16-but nimber down into a 3 bit op to determine which instruction (or instructions since 6 of them use same opcode for some readon) is being used and determine the format since e20 is unlike e15's consistent 4-2-2-4, as e 20 can use 3-13, 3-3-3-3-4, 3-3-3-7, and others. From there, I made a extract bit function to get the specific values required. Another function made was a sign extender since some functions like addi and lw can take negative immediates. Most of the variables I made use the uint16_t variable type. a switch statement is used to cycle through each opcode to determine instructions.
+This project is designed to simulate the e20 processor. It uses labels to simplify algorithm, like a function call. Uses transfer values between registers and memory. It is important to break each 16-but nimber down into a 3 bit op to determine which instruction (or instructions since 6 of them use same opcode for some readon) is being used and determine the format since e20 is unlike e15's consistent 4-2-2-4, as e 20 can use 3-13, 3-3-3-3-4, 3-3-3-7, and others. From there, I made a extract bit function to get the specific values required. Another function made was a sign extender since some functions like addi and lw can take negative immediates. Most of the variables I made use the uint16_t variable type. a switch statement is used to cycle through each opcode to determine instructions. The instructions have different functionalities and formats and they are:
 
+
+![Screenshot 2025-03-20 220504](https://github.com/user-attachments/assets/0c7c8380-554c-42d3![Screenshot 2025-03-20 221532](https://github.com/user-attachments/assets/5dd43cd7-03a![Screenshot 2025-03-20 221542](https://github.com/user-attachments/assets/769f0090-5d58-4209-afd9-bdd9e5262d67)
+c-4862-ab98-c83ede132444)
+-91a6-5ad240cf134d)
+![Screenshot 2025-03-20 221446](https://github.com/user-attachments/assets/c7ab8a8a-9561-4acd-842f-bea43da15c1c)
+![Screenshot 2025-03-20 221501](https://github.com/user-attachments/assets/e9ad21d0-7590-4b26-8b49-8c3bdb72460e)
+![Screenshot 2025-03-20 221520](https://github.com/user-attachments/assets/99848dc0-a555-44ee-baf9-5af4856de40e)
